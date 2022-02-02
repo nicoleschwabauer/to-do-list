@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="container">
+ <div class="container-add">
+        <label for="new-task">Add Item</label>
+        <div class="new-task-button">
+          <input id="new-task" type="text" />
+        <button>Add</button>
+      </div>
+    </div>
+      <div class="wrapper">
+      <div class="container-main">
+        <div class="container-inner">
+      <h3>To-do</h3>
+      <ul id="incomplete-tasks">
+        <li>
+          <input type="checkbox" />
+          <label>Pay Bills</label>
+          <input type="text" />
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </li>
+        <li class="editMode">
+          <input type="checkbox" />
+          <label>Grocery shopping</label>
+          <input type="text" value="Grocery Shopping" />
+          <button class="edit">Edit</button
+          ><button class="delete">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+    <div class="container-side">
+    <div class="container-inner">
+      <h3>Completed</h3>
+      <ul id="completed-tasks">
+        <li>
+          <input type="checkbox" checked />
+          <label>New Project</label>
+          <input type="text" />
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>

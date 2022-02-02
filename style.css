@@ -1,0 +1,280 @@
+:root {
+  --clr-300: white;
+  --clr-350: #b65337;
+  --clr-400: #ff3700;
+  --clr-450: #5e9ce29a;
+  --clr-500: #1c76dd;
+  --clr-550: rgb(67, 179, 67);
+  --clr-600: green;
+  --clr-900: black;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--clr-300);
+  color: var(--clr-900);
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  margin: 2em 0;
+}
+
+@media screen and (max-width: 930px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  margin: 7em;
+}
+
+.container-add {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: auto;
+}
+
+@media screen and (max-width: 430px) {
+  .new-task-button {
+    max-width: 300px;
+  }
+}
+
+.container button {
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.new-task-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 500px;
+}
+
+.new-task-button button {
+  margin-left: 10px;
+  padding: 5px;
+}
+
+.container-main {
+  min-width: 40em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 930px) {
+  .container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.container-side {
+  min-width: 40em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 930px) {
+  .container-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.container-inner {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  padding: 2em 3em;
+}
+
+@media screen and (max-width: 430px) {
+  .container-inner {
+    width: 20em;
+    padding: 0.5em;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+li,
+h3 {
+  clear: both;
+  list-style: none;
+}
+
+input,
+button {
+  outline: none;
+}
+
+.container-inner button {
+  display: flex;
+  flex-direction: row;
+  border: 0px;
+  color: #888;
+  font-size: 15px;
+  margin: 10px 0 0;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #333;
+}
+
+/* Heading */
+h3,
+label[for="new-task"] {
+  color: var(--clr-500);
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
+  padding: 30px 0 10px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  margin: 0;
+  font-size: 18px;
+  line-height: 18px;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  color: #888;
+}
+
+input[type="text"]:focus {
+  color: #333;
+}
+
+/* New Task */
+label[for="new-task"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 65%;
+}
+
+input#new-task {
+  float: left;
+  width: 318px;
+}
+
+.new-task-button button:hover {
+  color: #0fc57c;
+}
+
+/* Task list */
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--clr-450);
+}
+
+li > input[type="checkbox"] {
+  margin: 20px 10px;
+}
+
+li > label {
+  font-size: 18px;
+  line-height: 40px;
+  width: 237px;
+  padding: 0 0 0 11px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  white-space: wrap;
+}
+
+li > input[type="text"] {
+  width: 226px;
+}
+
+li > .delete:hover {
+  color: #cf2323;
+}
+
+/* Completed */
+#completed-tasks label {
+  text-decoration: line-through;
+  color: var(--clr-900);
+}
+
+/* Edit Task */
+ul li input[type="text"] {
+  display: none;
+}
+
+ul li.editMode input[type="text"] {
+  display: flex;
+}
+
+ul li.editMode label {
+  display: none;
+}
